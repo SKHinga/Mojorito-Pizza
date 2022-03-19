@@ -9,15 +9,33 @@ body {
   background-color: #F5F5FD;
   font-family: 'Poppins', sans-serif;
 }
+.sec1 {
+  width: 100vw;
+  overflow: hidden;
+}
 .logo p {
   font-family: 'Lobster', cursive;
   transform: translateY(30%);
   font-size: 20px;
 }
 .logo img {
-  width: 50px;
+  width: 25%;
+  margin-left: 20px;
 }
-.nav ul{
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000000;
+}
+.nav-item {
   list-style: none;
 }
 .nav ul li {
@@ -26,12 +44,13 @@ body {
 .nav ul li a {
   text-decoration: none;
   color: #000000;
+  transition: 0.5s ease;
 }
 .cart a {
   text-decoration: none;
   color: #000000;
 }
-.nav ul li a:hover {
+.nav-item li a:hover {
   color: #F96B2C;
   font-size: 18px;
 }
@@ -41,6 +60,7 @@ body {
   border: none;
   border-radius: 12px;
   padding: 3px 4px;
+  font-size: 15px;
 }
 .rito {
   color: #F96B2C;
