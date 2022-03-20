@@ -120,7 +120,23 @@ body {
 .bracket {
   color: #F96B2C;
 }
-
+.hinga img{
+  width: 35px;
+}
+.hinga p {
+  transform: translateY(30%);
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer {
+  width: 100%;
+  background: rgba(249, 107, 44, 0.5);
+}
+.icons a {
+  color: #000000;
+  font-size: 20px;
+  margin-left: 20px;
+}
 
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
