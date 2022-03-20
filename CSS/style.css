@@ -35,7 +35,7 @@ body {
   transition: all 0.3s ease-in-out;
   background-color: #000000;
 }
-.small {
+.sec1 {
   position: fixed;
   background-color: #F5F5FD;
 }
@@ -53,6 +53,11 @@ body {
 .cart a {
   text-decoration: none;
   color: #000000;
+  transition: 0.3s ease;
+}
+.cart a:hover {
+  font-size: 30px;
+  color: #F96B2C;
 }
 .nav-item li a:hover {
   color: #F96B2C;
@@ -121,8 +126,9 @@ body {
 .menu h2 {
   color: #F96B2C;
 }
-.bracket {
-  color: #F96B2C;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #F96B2C;
 }
 .hinga img{
   width: 35px;
@@ -140,6 +146,27 @@ body {
   color: #000000;
   font-size: 20px;
   margin-left: 20px;
+}
+.back-home {
+  font-size: 25px;
+  display: flex;
+  justify-content: end;
+}
+.back-home:hover a {
+  font-size: 30px;
+  color: #F96B2C;
+}
+.back-home a {
+  color: #000000;
+  transition: 0.3s ease;
+}
+.form-submit {
+  background-image: url(../Assets/kisspng-thai-cuisine-basil-pizza-greek-cuisine-vietnamese-basil-5ac072f30f0bd5.3950791115225617790616.png);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 
