@@ -137,3 +137,19 @@ body {
   .nav-item.active {
     left: 0;
   }
+  .land {
+    width: 100vw;
+    margin: auto;
+  }
+  .average {
+    margin-left: 0%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+  }
+  .basil {
+    position: absolute;
+    right: 30%;
+    bottom: 40%;
+  }
+}
