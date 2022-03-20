@@ -65,10 +65,31 @@ body {
 .rito {
   color: #F96B2C;
 }
-
-
-
-
+/* .tomato, .basil, .papper {
+  width: 10%;
+}
+.pizza {
+  width: 35vw;
+}
+.average p {
+  font-weight: 500;
+  font-size: 2em;
+}
+.tomato {
+  position: relative;
+  left: 30%;
+}
+.basil {
+  position: absolute;
+  right: 50%;
+  bottom: 40%;
+}
+.papper {
+  position: relative;
+  left: 30%;
+  bottom: 10%;
+  transform: rotate(-45deg);
+} */
 
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -116,4 +137,3 @@ body {
   .nav-item.active {
     left: 0;
   }
-}
