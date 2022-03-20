@@ -156,6 +156,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100w;
+    position: relative;
     overflow: hidden;
   }
   .hamburger {
@@ -212,5 +213,8 @@ body {
   .content {
     width: 80%;
     line-height: 20px;
+  }
+  .hinga img{
+   display: none;
   }
 }
