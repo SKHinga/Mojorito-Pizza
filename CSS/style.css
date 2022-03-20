@@ -114,6 +114,14 @@ body {
   width: 60%;
   margin: auto;
 }
+.menu h2 {
+  color: #F96B2C;
+}
+.bracket {
+  color: #F96B2C;
+}
+
+
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .car, .logo img {
@@ -174,5 +182,8 @@ body {
     position: absolute;
     right: 30%;
     bottom: 40%;
+  }
+  .top {
+    display: none;
   }
 }
