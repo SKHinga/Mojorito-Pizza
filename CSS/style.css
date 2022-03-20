@@ -130,6 +130,12 @@ body {
 .carousel-control-prev-icon {
   background-color: #F96B2C;
 }
+.carousel-indicators .active {
+  background-color:#F96B2C
+}
+.carousel-indicators .notactive {
+  background-color: rgba(249, 107, 44, 0.5);
+}
 .hinga img{
   width: 35px;
 }
