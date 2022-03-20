@@ -186,4 +186,11 @@ body {
   .top {
     display: none;
   }
+  .about {
+    height: 80vh;
+  }
+  .content {
+    width: 80%;
+    line-height: 20px;
+  }
 }
