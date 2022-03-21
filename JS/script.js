@@ -1,8 +1,3 @@
-let price ;
-let crust_price;
-let tooping_price ;
-let total = 0
-
 function GetPizza (name,size,crust,topping,total){
   this.name = name;
   this.size = size;
@@ -11,11 +6,12 @@ function GetPizza (name,size,crust,topping,total){
   this.total = total;
 };
 $(document).ready(()=>{
-    $("button.proceed").click((event)=>{
+    $("button.proceed").click((e)=>{
     let pName = $(".name option:selected").val();
     let pSize = $("#size option:selected").val();
     let pCrust = $("#crust option:selected").val();
     let pTopping = [];
+    e.preventDefault();
     $.each($("input[name='toppings']:checked"),function(){
       pTopping.push($(this).val());
     })
@@ -54,15 +50,17 @@ $(document).ready(()=>{
     let topping_value = pTopping.length*100;
 
 
-  if((pSize == "0") && (pCrust == "0")){
+  if((pSize != "0") && (pCrust != "0")){
+    $("button.proceed").hide();
+    $("div.choice").slideDown(1200);
+    // $("button.proceed").show();
+    // $("div.choice").hide();
+    // alert("Please select the Pizza size and crust");
+  }
+  else {
     $("button.proceed").show();
     $("div.choice").hide();
     alert("Please select the Pizza size and crust");
-  }
-  else {
-
-    $("button.proceed").hide();
-    $("div.choice").slideDown(1200);
   }
 
   total = price + c_price + topping_value;
@@ -122,7 +120,7 @@ $(document).ready(()=>{
    
 
     newOrder = new GetPizza(pName,pSize,pCrust,pTopping,total);
-    $("#ordersmade").append(`<tr><td id="pizzaflavour">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzasize"> `+ newOrder.crust +`</td><td id="pizzasize"> `+ newOrder.topping +`</td><td id="pizzasize"> `+ newOrder.total +`</td></tr>`);
+    $("#ordersmade").append(`<tr><td id="pizzaflavour">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzacrust"> `+ newOrder.crust +`</td><td id="pizzatopping"> `+ newOrder.topping +`</td><td id="totals"> `+ newOrder.total +`</td></tr>`);
   })
   $("button#checkout").click(function(){
     $("button#checkout").hide();
@@ -163,6 +161,5 @@ $(document).ready(()=>{
       $("button#final-order").show();
     }
   })
-  event.preventDefault();
   })
 })
