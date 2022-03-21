@@ -1,4 +1,4 @@
-function GetPizza (name,size,crust,topping,total){
+  function GetPizza (name,size,crust,topping,total){
   this.name = name;
   this.size = size;
   this.crust= crust;
@@ -15,6 +15,12 @@ $(document).ready(()=>{
     $.each($("input[name='toppings']:checked"),function(){
       pTopping.push($(this).val());
     })
+
+    let price ;
+    let c_price;
+    // let tooping_price ;
+    let total = 0;
+
     switch(pSize){
       case "0":
         price= 0;
@@ -27,6 +33,7 @@ $(document).ready(()=>{
         break;
       case "small":
         price = 700;
+        break;
       default:
         console.log("error");
     }
@@ -35,13 +42,13 @@ $(document).ready(()=>{
       case "0":
         c_price = 0;
         break;
-      case "Crispy":
+      case "crispy":
         c_price = 300;
         break;
-      case "Stuffed":
+      case "gluten":
         c_price = 200;
         break;
-      case "Gluten-free":
+      case "stuffed":
         c_price = 250;
         break;
       default:
@@ -50,17 +57,14 @@ $(document).ready(()=>{
     let topping_value = pTopping.length*100;
 
 
-  if((pSize != "0") && (pCrust != "0")){
-    $("button.proceed").hide();
-    $("div.choice").slideDown(1200);
-    // $("button.proceed").show();
-    // $("div.choice").hide();
-    // alert("Please select the Pizza size and crust");
-  }
-  else {
+  if((pSize == "0") && (pCrust == "0")){
+
     $("button.proceed").show();
     $("div.choice").hide();
     alert("Please select the Pizza size and crust");
+  } else {
+    $("button.proceed").hide();
+    $("div.choice").slideDown(1200);
   }
 
   total = price + c_price + topping_value;
@@ -99,15 +103,14 @@ $(document).ready(()=>{
       case "0":
         c_price = 0;
         break;
-      case "Crispy":
+      case "crispy":
         c_price = 300;
         break;
-      case "Stuffed":
+      case "gluten":
         c_price = 200;
         break;
-      case "Gluten-free":
+      case "stuffed":
         c_price = 250;
-        break;
       default:
         console.log("error");
     }
@@ -136,7 +139,7 @@ $(document).ready(()=>{
     $("button.deliver").hide();
     $("#pizzatotal").hide();
 
-    let deliveryAmount = checkoutTotal + 150;
+    let deliveryAmount = checkoutTotal + 200;
     $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
   })
 
@@ -145,7 +148,7 @@ $(document).ready(()=>{
     $("#pizzatotal").hide();
     $(".delivery").hide();
     $("button#final-order").hide();
-    let deliceryAmount = checkoutTotal+ 150;
+    let deliceryAmount = checkoutTotal+ 200;
 
     let person = $("input#name").val();
     let phone = $("input#phone").val();
