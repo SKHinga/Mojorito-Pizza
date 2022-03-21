@@ -83,6 +83,11 @@ $(document).ready(()=>{
     let pCrust = $("#crust option:selected").val();
     let pTopping = []; 
 
+    $.each($("input[name='toppings']:checked"),function(){
+      pTopping.push($(this).val());
+    })
+
+
     switch(pSize){
       case "0":
         price= 0;
